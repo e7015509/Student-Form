@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="studform.formtests.AccessStudForm">
+      <class name="studform.formtests.PersonalDetailsTest">
         <methods>
-          <include name="validatepersonaldet"/>
-          <include name="afterTest"/>
           <include name="beforeTest"/>
+          <include name="studentid"/>
+          <include name="afterTest"/>
         </methods>
-      </class> <!-- studform.formtests.AccessStudForm -->
+      </class> <!-- studform.formtests.PersonalDetailsTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -11,7 +11,7 @@ public class DataBroker {
 			  
 			 	String browser= null;
 			 	String A65formURL = null;
-			 	String lblStudentid = null;
+			 	String expStudentidlbl = null;
 			
 				String CSV_PATH = "C:\\Users\\e7015509\\Documents\\StudentForm-AutoRepo\\Student-Form\\TestData\\StudFormTestdata.csv";
 				
@@ -24,12 +24,13 @@ public class DataBroker {
 					   csvCell = reader.readNext();
 					   browser = csvCell[0];
 					   A65formURL = csvCell[1];
-					   lblStudentid = csvCell[2];
+					   expStudentidlbl = csvCell[2];
 					   
 		   
 						//Printing retrieved data
 					   System.out.println(browser);
 					   System.out.println(A65formURL);
+					   System.out.println(expStudentidlbl);
 					   		  
 
 					   reader.close();
@@ -38,7 +39,7 @@ public class DataBroker {
 			           e.printStackTrace();
 			       }
 				
-				String [] RetrivedData = {browser,A65formURL,lblStudentid};
+				String [] RetrivedData = {browser,A65formURL,expStudentidlbl};
 				return RetrivedData;	
 		  }
 	}

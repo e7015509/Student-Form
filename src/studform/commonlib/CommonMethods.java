@@ -32,19 +32,19 @@ public class CommonMethods {
 		}
 		
 		//Print stack trace to file
-		public Exception printStackTrace(Exception e) throws FileNotFoundException{
+		public Throwable printStackTrace(Throwable persondetexcep) throws FileNotFoundException{
 	        String fileformat = new SimpleDateFormat("yyyyMMddHHmm'.txt'").format(new Date());
 			String excepfilename = methodname+fileformat;
-			File file = new File("C:\\Users\\e7015509\\Documents\\Automation_Repo\\Student-Calendar\\ErrorLog\\"+excepfilename+"");
+			File file = new File("C:\\Users\\e7015509\\Documents\\StudentForm-AutoRepo\\Student-Form\\ErrorLog\\"+excepfilename+"");
 			PrintStream ps = new PrintStream(file);
-			e.printStackTrace(ps);
-			return e;
+			persondetexcep.printStackTrace(ps);
+			return persondetexcep;
 		}
 
 		
 		public void screenshot(WebDriver driver) throws IOException{
 			File screenshotFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-			FileUtils.copyFile(screenshotFile, new File("C:\\Users\\e7015509\\Documents\\Automation_Repo\\Student-Calendar\\Screenshot\\test.jpg"));
+			FileUtils.copyFile(screenshotFile, new File("C:\\Users\\e7015509\\Documents\\StudentForm-AutoRepo\\Student-Form\\Screenshot\\A65Form_Screenshot.jpg"));
 		}
 			
 

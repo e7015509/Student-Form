@@ -9,6 +9,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import studform.commonlib.*;
 import studform.pageobjectrepo.*;
@@ -30,7 +31,7 @@ public class AccessStudForm {
 	}
 	
 	
-	@BeforeClass
+	@BeforeTest
 	 public void beforeTest() throws InterruptedException, IOException {
 		  DataBroker TestData = new DataBroker();
 		  String [] csvCell;

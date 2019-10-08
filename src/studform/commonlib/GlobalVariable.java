@@ -4,7 +4,7 @@ public class GlobalVariable {
 	
 	public String browser= null;
 	public String A65formURL = null;
-	public String lblStudentid = null;
+	public String expStudentidlbl = null;
 	
 	public void global()
 	{
@@ -14,6 +14,6 @@ public class GlobalVariable {
 		
 		browser = csvCell[0];
 		A65formURL = csvCell[1];
-		lblStudentid = csvCell[2];
+		expStudentidlbl = csvCell[2];
 }
 }

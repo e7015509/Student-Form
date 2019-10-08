@@ -13,19 +13,18 @@ public class PersonalDetailsAction extends GlobalVariable{
 	public WebDriver driver;
 	CommonMethods commMethods =new CommonMethods();
 	
-	public void validatestudentid() throws IOException{
+	public void validatestudentid() throws IOException, AssertionError{
 		try{
 		commMethods.accessstudentform(driver, A65formURL);
 		Thread.sleep(5000);
-		String expStudIDlbl= lblStudentid;
 		String actStudIdlbl= A65FormLandingPageObj.lbl_StudentId(driver).getText();
 		System.out.println(actStudIdlbl);
-		Assert.assertEquals(actStudIdlbl, expStudIDlbl);
-	}catch (Exception persondetexcep){
+		Assert.assertEquals(actStudIdlbl, expStudentidlbl);
+	}catch (Throwable persondetexcep){
 		commMethods.methodname="validatestudentid_";
 		commMethods.printStackTrace(persondetexcep);
 		commMethods.screenshot(driver);		
+		Assert.fail();
 	}
-
-	}
+}
 }
