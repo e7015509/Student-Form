@@ -5,8 +5,8 @@
     <classes>
       <class name="studform.formtests.PersonalDetailsTest">
         <methods>
+          <include name="coursedata"/>
           <include name="beforeTest"/>
-          <include name="studentid"/>
           <include name="afterTest"/>
         </methods>
       </class> <!-- studform.formtests.PersonalDetailsTest -->

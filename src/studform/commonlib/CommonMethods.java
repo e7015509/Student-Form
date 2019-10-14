@@ -3,10 +3,12 @@ package studform.commonlib;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.PrintStream;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.IOUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -46,6 +48,6 @@ public class CommonMethods {
 			File screenshotFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 			FileUtils.copyFile(screenshotFile, new File("C:\\Users\\e7015509\\Documents\\StudentForm-AutoRepo\\Student-Form\\Screenshot\\A65Form_Screenshot.jpg"));
 		}
-			
-
+		
+		
 }

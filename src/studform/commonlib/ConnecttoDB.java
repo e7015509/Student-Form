@@ -13,7 +13,7 @@ import java.sql.Statement;
 public class ConnecttoDB {
  
  static Connection con=null;      
- public String url="jdbc:oracle:thin://caldevenv3.vu.edu.au/ENV3";      
+ public String url="jdbc:oracle:thin:@//caldevenv3.vu.edu.au:1521/ENV3";      
  private String username="sis_owner";     
  private String password="caluser";     
  private Statement stmt;
