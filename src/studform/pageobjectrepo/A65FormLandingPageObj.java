@@ -26,12 +26,25 @@ private static List<WebElement> elementList = null;
 		return element;
 	}
 	
-	public static List<WebElement> dropdwn_Course(WebDriver driver){
-		driver.findElements(By.xpath("//div[@id='65c9cb97-d759-463f-0fda-f91efea43359_fe13a511-a5c1-660b-c1bd-dbe9f3972df6_droplist']//ul/li[@title]"));
-		return elementList;
-		
+	public static WebElement dropdwn_Course(WebDriver driver){
+		element=driver.findElement(By.xpath("//div[@id='65c9cb97-d759-463f-0fda-f91efea43359_fe13a511-a5c1-660b-c1bd-dbe9f3972df6']//a[@class='dropdown border-left-only']"));
+		return element;		
 	}
-
+	
+	public static List<WebElement> dropdwn_CourseList(WebDriver driver){
+		elementList=driver.findElements(By.xpath("//div[@id='65c9cb97-d759-463f-0fda-f91efea43359_fe13a511-a5c1-660b-c1bd-dbe9f3972df6_droplist']//ul/li[@title]"));
+		return elementList;
+	}
+	
+	public static WebElement lbl_StudyYear(WebDriver driver){
+		element=driver.findElement(By.xpath("//span[@name='lblStudyYear']"));
+		return element;
+	}
+	
+	public static WebElement val_StudyYear(WebDriver driver){
+		element=driver.findElement(By.xpath("//span[@name='dlStudyYear']"));
+		return element;
+	}
 	}
 
 

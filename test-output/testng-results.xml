@@ -1,29 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="32113" started-at="2019-10-14T00:48:41Z" finished-at="2019-10-14T00:49:13Z">
+  <suite name="Default suite" duration-ms="18472" started-at="2019-10-18T04:27:06Z" finished-at="2019-10-18T04:27:25Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="32113" started-at="2019-10-14T00:48:41Z" finished-at="2019-10-14T00:49:13Z">
-      <class name="studform.formtests.PersonalDetailsTest">
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:studform.formtests.PersonalDetailsTest@215be6bb]" name="beforeTest" is-config="true" duration-ms="3848" started-at="2019-10-14T11:48:41Z" finished-at="2019-10-14T11:48:45Z">
+    <test name="Default test" duration-ms="18472" started-at="2019-10-18T04:27:06Z" finished-at="2019-10-18T04:27:25Z">
+      <class name="studform.formtests.A65FormTest">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:studform.formtests.A65FormTest@215be6bb]" name="beforeTest" is-config="true" duration-ms="3832" started-at="2019-10-18T15:27:06Z" finished-at="2019-10-18T15:27:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="coursecount()[pri:1, instance:studform.formtests.PersonalDetailsTest@215be6bb]" name="coursecount" duration-ms="14665" started-at="2019-10-14T11:48:45Z" description="Validate course count between the database and the student form" finished-at="2019-10-14T11:48:59Z">
+        <test-method status="PASS" signature="studyyear()[pri:1, instance:studform.formtests.A65FormTest@215be6bb]" name="studyyear" duration-ms="12549" started-at="2019-10-18T15:27:10Z" description="Validate study year" finished-at="2019-10-18T15:27:23Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- coursecount -->
-        <test-method status="PASS" signature="coursedata()[pri:2, instance:studform.formtests.PersonalDetailsTest@215be6bb]" name="coursedata" duration-ms="13489" started-at="2019-10-14T11:48:59Z" description="Validate course data between the database and the student form" finished-at="2019-10-14T11:49:13Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- coursedata -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:studform.formtests.PersonalDetailsTest@215be6bb]" name="afterTest" is-config="true" duration-ms="94" started-at="2019-10-14T11:49:13Z" finished-at="2019-10-14T11:49:13Z">
+        </test-method> <!-- studyyear -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:studform.formtests.A65FormTest@215be6bb]" name="afterTest" is-config="true" duration-ms="2078" started-at="2019-10-18T15:27:23Z" finished-at="2019-10-18T15:27:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-      </class> <!-- studform.formtests.PersonalDetailsTest -->
+      </class> <!-- studform.formtests.A65FormTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

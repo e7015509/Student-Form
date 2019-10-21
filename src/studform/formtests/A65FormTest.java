@@ -10,7 +10,7 @@ import studform.commonlib.DatabaseConnector;
 import studform.commonlib.Driver;
 import studform.formactions.*;
 
-public class PersonalDetailsTest extends PersonalDetailsAction {
+public class A65FormTest extends PersonalDetailsAction {
 	//ConnecttoDB db=new ConnecttoDB();
 	
 	
@@ -18,15 +18,20 @@ public class PersonalDetailsTest extends PersonalDetailsAction {
 	public void studentid() throws IOException{
 			validatestudentid();
 			
-		}*/
-	@Test(priority=1, description="Validate course count between the database and the student form")
+		}
+	@Test(priority=2, description="Validate course count between the database and the student form")
 	public void coursecount() throws IOException{
 		validatecoursecount();
-	}
+	}*/
 	
-	@Test(priority=2, description="Validate course data between the database and the student form")
+	/*@Test(priority=1, description="Validate course data between the database and the student form")
 	public void coursedata() throws IOException{
 		validatecoursedata();
+	}*/
+	
+	@Test(priority=1, description="Validate study year")
+	public void studyyear() throws Exception, Throwable{
+		validatestudyyear();
 	}
 	
 	@BeforeTest
