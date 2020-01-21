@@ -10,9 +10,10 @@ public class DataBroker {
 		 public String[] ReadData() {
 			  
 			 	String browser= null;
-			 	String A65formURL = null;
-			 	String expStudentidlbl = null;
-			 	String sqlQuery = null;
+			 	String myvutest = null;
+			 	String username = null;
+			 	String password =null;
+			 	String unitcode1 = null;
 			
 				String CSV_PATH = "C:\\Users\\e7015509\\Documents\\StudentForm-AutoRepo\\Student-Form\\TestData\\StudFormTestdata.csv";
 				
@@ -24,15 +25,15 @@ public class DataBroker {
 					   csvCell = reader.readNext();	   
 					   csvCell = reader.readNext();
 					   browser = csvCell[0];
-					   A65formURL = csvCell[1];
-					   expStudentidlbl = csvCell[2];
-					   sqlQuery = csvCell[3];
-					   
+					   myvutest = csvCell[1];
+					   username = csvCell[2];
+					   password =csvCell[3];
+					   unitcode1 = csvCell[4];
 		   
 						//Printing retrieved data
 					   System.out.println(browser);
-					   System.out.println(A65formURL);
-					   System.out.println(expStudentidlbl);
+					   System.out.println(myvutest);
+					  
 					   		  
 
 					   reader.close();
@@ -41,7 +42,7 @@ public class DataBroker {
 			           e.printStackTrace();
 			       }
 				
-				String [] RetrivedData = {browser,A65formURL,expStudentidlbl};
+				String [] RetrivedData = {browser,myvutest,username,password,unitcode1};
 				return RetrivedData;	
 		  }
 	}

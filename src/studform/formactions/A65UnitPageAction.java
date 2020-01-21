@@ -17,21 +17,19 @@ public class A65UnitPageAction extends GlobalVariable{
 
 	public void validateaddunit() throws Exception, IOException{
 		try{
-			commMethods.accessstudentform(driver, A65formURL);
+			commMethods.accessA65Form(driver,myvutest);
 			Thread.sleep(3000);
 			
-			Boolean addunitbtn=A65FormPageObj.btn_AddUnit(driver).isEnabled();
+			/*Boolean addunitbtn=A65FormPageObj.btn_AddUnit(driver).isEnabled();
 				if (addunitbtn = true){
 					System.out.println("Add Unit button is enabled");
 				}else{
 					System.out.println("Add Unit button is disabled");
-				}
-			A65FormPageObj.btn_AddUnit(driver).click();
+				}*/
+			//A65FormPageObj.btn_AddUnit(driver).click();
+			commMethods.clickonicon(driver,"Add Unit");
 			Thread.sleep(3000);
-			//driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@class='runtime-popup']")));
-			A65FormPageObj.frm_SwitchtoFrameUnit(driver);
-			//driver.findElement(By.xpath("//div[@id='00000000-0000-0000-0000-000000000000_383e5a6c-5f94-55da-f16d-ba04e5634828']//div[@class='styling-outer-wrapper']//div[@class='input-control-buttons styling-right styling-inner-wrapper']//a")).click();
-			A65FormPageObj.dropdwn_StudyPeriod(driver).click();
+			commMethods.clickondropdown(driver,"1");
 			Thread.sleep(3000);
 		}catch (Throwable addunitexcep){
 			commMethods.methodname="validateaddunit_";

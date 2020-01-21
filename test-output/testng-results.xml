@@ -1,29 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="3" passed="3">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="50838" started-at="2019-10-28T23:08:58Z" finished-at="2019-10-28T23:09:48Z">
+  <suite name="Default suite" duration-ms="20461" started-at="2020-01-14T04:55:25Z" finished-at="2020-01-14T04:55:45Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="50838" started-at="2019-10-28T23:08:58Z" finished-at="2019-10-28T23:09:48Z">
+    <test name="Default test" duration-ms="20461" started-at="2020-01-14T04:55:25Z" finished-at="2020-01-14T04:55:45Z">
       <class name="studform.formtests.A65FormMainPageTest">
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:studform.formtests.A65FormMainPageTest@215be6bb]" name="beforeTest" is-config="true" duration-ms="4066" started-at="2019-10-29T10:08:58Z" finished-at="2019-10-29T10:09:02Z">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:studform.formtests.A65FormMainPageTest@3a82f6ef]" name="beforeTest" is-config="true" duration-ms="3867" started-at="2020-01-14T15:55:25Z" finished-at="2020-01-14T15:55:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="studentid()[pri:1, instance:studform.formtests.A65FormMainPageTest@215be6bb]" name="studentid" duration-ms="15142" started-at="2019-10-29T10:09:02Z" description="Validate student id in the personal details section" finished-at="2019-10-29T10:09:17Z">
+        <test-method status="PASS" signature="myvulogin()[pri:1, instance:studform.formtests.A65FormMainPageTest@3a82f6ef]" name="myvulogin" duration-ms="16494" started-at="2020-01-14T15:55:28Z" description="login to MYVU" finished-at="2020-01-14T15:55:45Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- studentid -->
-        <test-method status="PASS" signature="coursecount()[pri:2, instance:studform.formtests.A65FormMainPageTest@215be6bb]" name="coursecount" duration-ms="13691" started-at="2019-10-29T10:09:17Z" description="Validate course count between the database and the student form" finished-at="2019-10-29T10:09:30Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- coursecount -->
-        <test-method status="PASS" signature="coursedata()[pri:3, instance:studform.formtests.A65FormMainPageTest@215be6bb]" name="coursedata" duration-ms="15829" started-at="2019-10-29T10:09:30Z" description="Validate course data between the database and the student form" finished-at="2019-10-29T10:09:46Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- coursedata -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:studform.formtests.A65FormMainPageTest@215be6bb]" name="afterTest" is-config="true" duration-ms="2093" started-at="2019-10-29T10:09:46Z" finished-at="2019-10-29T10:09:48Z">
+        </test-method> <!-- myvulogin -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:studform.formtests.A65FormMainPageTest@3a82f6ef]" name="afterTest" is-config="true" duration-ms="80" started-at="2020-01-14T15:55:45Z" finished-at="2020-01-14T15:55:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->

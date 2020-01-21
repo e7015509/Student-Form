@@ -6,8 +6,8 @@
       <class name="studform.formtests.A65FormMainPageTest">
         <methods>
           <include name="beforeTest"/>
+          <include name="addunit"/>
           <include name="afterTest"/>
-          <include name="studyyear"/>
         </methods>
       </class> <!-- studform.formtests.A65FormMainPageTest -->
     </classes>

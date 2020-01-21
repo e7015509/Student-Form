@@ -4,20 +4,16 @@ import java.io.IOException;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-
-import studform.commonlib.ConnecttoDB;
-import studform.commonlib.DatabaseConnector;
-import studform.commonlib.Driver;
 import studform.formactions.*;
+import studform.commonlib.*;
 
 public class A65FormMainPageTest extends A65MainPageAction {
-	//ConnecttoDB db=new ConnecttoDB();
+
+	CommonMethods commMethods =new CommonMethods();
 	
-	
-	@Test(priority=1, description="Validate student id in the personal details section")
+	/*@Test(priority=1, description="Validate student name in the personal details section")
 	public void studentid() throws IOException{
-		validatestudentid();
-			
+		validatestudentname();	
 		}
 	@Test(priority=2, description="Validate course count between the database and the student form")
 	public void coursecount() throws IOException{
@@ -29,13 +25,29 @@ public class A65FormMainPageTest extends A65MainPageAction {
 		validatecoursedata();
 	}
 	
-	@Test(priority=1, description="Validate study year")
+	@Test(priority=4, description="Validate study year")
 	public void studyyear() throws Exception, Throwable{
 		validatestudyyear();
 	}
 	
+	@Test(priority=5, description="Validate course location")
+	public void courselocation() throws Exception, Throwable{	
+		validatecourselocation();
+	}
 	
-
+	@Test(priority=6, description="Validate study period")
+	public void studyperiod() throws Exception, Throwable{	
+		validatestudyperiod();
+	}
+	
+	@Test(priority=1, description="Validate study period")
+	public void addunit() throws Exception, Throwable{	
+		addsingleunit();
+	}*/
+	@Test(priority=1, description="login to MYVU")
+	public void myvulogin() throws Exception, Throwable{	
+		commMethods.accessA65Form(driver,myvutest);
+	}
 	
 	@BeforeTest
 	 public void beforeTest(){
@@ -48,7 +60,6 @@ public class A65FormMainPageTest extends A65MainPageAction {
 	@AfterTest
 	public void afterTest() throws Throwable{
 		driver.close();
-		//db.OracleCloseConnection();
 		
 	}
 
