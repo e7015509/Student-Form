@@ -1,15 +1,16 @@
 package studform.formtests;
-import java.io.IOException;
-
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-import studform.formactions.*;
-import studform.commonlib.*;
+
+import studform.commonlib.CommonMethods;
+import studform.commonlib.Driver;
+import studform.formactions.A65MainPageAction;
 
 public class A65FormMainPageTest extends A65MainPageAction {
 
 	CommonMethods commMethods =new CommonMethods();
+	
 	
 	/*@Test(priority=1, description="Validate student name in the personal details section")
 	public void studentid() throws IOException{
@@ -46,12 +47,12 @@ public class A65FormMainPageTest extends A65MainPageAction {
 	}*/
 	@Test(priority=1, description="login to MYVU")
 	public void myvulogin() throws Exception, Throwable{	
-		commMethods.accessA65Form(driver,myvutest);
+		commMethods.accessA65Form(driver);
 	}
 	
 	@BeforeTest
-	 public void beforeTest(){
-		global();
+	 public void beforeTest() throws Throwable{
+		a65formtestdata();
 		driver=Driver.getDriver(driver, browser);
 		driver.manage().window().maximize();
 		

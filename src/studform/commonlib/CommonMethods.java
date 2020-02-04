@@ -27,9 +27,9 @@ public class CommonMethods extends GlobalVariable {
 	public WebDriver driver;
 		
 	//Login to MYVU test
-	public WebDriver accessA65Form(WebDriver driver, String URL) throws IOException{
+	public WebDriver accessA65Form(WebDriver driver) throws IOException, Throwable{
 		try{
-			driver.get(URL);
+			driver.get(MYVUlink);
 			WebDriverWait wait=new WebDriverWait(driver,60);
 			wait.until(ExpectedConditions.elementToBeClickable(By.id("username")));
 			CommonPageObj.txtbox_username(driver).sendKeys(username);
@@ -42,9 +42,9 @@ public class CommonMethods extends GlobalVariable {
 			wait.until(ExpectedConditions.invisibilityOf(CommonPageObj.anim_courseloading(driver)));
 			CommonPageObj.link_unitwaiver(driver).click();
 			wait.until(ExpectedConditions.invisibilityOf(CommonPageObj.anim_loader(driver)));
-			wait.until(ExpectedConditions.elementToBeClickable(CommonPageObj.btn_a65signout(driver)));
-			CommonPageObj.btn_a65signout(driver).click();
-			Thread.sleep(6000);
+			//wait.until(ExpectedConditions.elementToBeClickable(CommonPageObj.btn_a65signout(driver)));
+			//CommonPageObj.btn_a65signout(driver).click();
+			//Thread.sleep(6000);
 			}catch (Exception accessA65form){
 				methodname="accessA65form";
 				printStackTrace(accessA65form);

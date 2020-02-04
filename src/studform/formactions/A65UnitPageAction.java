@@ -1,24 +1,22 @@
 package studform.formactions;
 
-import java.io.IOException;
-
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
-import studform.commonlib.CommonMethods;
+import studform.commonlib.CommonMethdtest;
 import studform.commonlib.ConnecttoDB;
 import studform.commonlib.GlobalVariable;
-import studform.pageobjectrepo.A65FormPageObj;
-
+	
 public class A65UnitPageAction extends GlobalVariable{
-	public WebDriver driver;
-	CommonMethods commMethods =new CommonMethods();
+	public WebDriver driver;		
+	CommonMethdtest commMethd =new CommonMethdtest();
 	ConnecttoDB db=new ConnecttoDB();
 
-	public void validateaddunit() throws Exception, IOException{
+	public void validateaddunit() throws Throwable{	
 		try{
-			commMethods.accessA65Form(driver,myvutest);
+			commMethd.accessA65Form(driver);
 			Thread.sleep(3000);
+			a65formtestdata();
 			
 			/*Boolean addunitbtn=A65FormPageObj.btn_AddUnit(driver).isEnabled();
 				if (addunitbtn = true){
@@ -26,15 +24,17 @@ public class A65UnitPageAction extends GlobalVariable{
 				}else{
 					System.out.println("Add Unit button is disabled");
 				}*/
-			//A65FormPageObj.btn_AddUnit(driver).click();
-			commMethods.clickonicon(driver,"Add Unit");
+			commMethd.clickonicon(driver,"Add unit");
 			Thread.sleep(3000);
-			commMethods.clickondropdown(driver,"1");
+			commMethd.switchtoframeunit(driver);
+			commMethd.clickondropdown(driver,"1");
+			Thread.sleep(3000);
+			commMethd.selectvaluefromdropdown(driver,studyperiod);
 			Thread.sleep(3000);
 		}catch (Throwable addunitexcep){
-			commMethods.methodname="validateaddunit_";
-			commMethods.printStackTrace(addunitexcep);
-			commMethods.screenshot(driver);	
+			commMethd.methodname="validateaddunit_";
+			commMethd.printStackTrace(addunitexcep);
+			commMethd.screenshot(driver);	
 			Assert.fail();
 		}
 

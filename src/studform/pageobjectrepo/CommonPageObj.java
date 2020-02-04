@@ -62,6 +62,7 @@ public class CommonPageObj {
 		return element=driver.findElement(By.xpath("//img[@class='picture-control-inline clickable']"));
 	}
 	
+		
 
 }
 	

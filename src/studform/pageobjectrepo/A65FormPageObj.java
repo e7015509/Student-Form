@@ -34,13 +34,18 @@ private static String elementname=null;
 		return element=driver.findElement(By.xpath("//span[@name='dlLocation']"));
 	}
 
-//Section C- Unit of Study and Waiver Details
 	public static WebElement getvalue_StudyYear(WebDriver driver){
 		return element=driver.findElement(By.xpath("//span[@id='65c9cb97-d759-463f-0fda-f91efea43359_770487f1-752a-b1d5-632f-61629e4015f1']"));
 	}
+//Section C- Unit of Study and Waiver Details
+	public static WebElement clickonicon(WebDriver driver, String iconName){
+		return element=driver.findElement(By.xpath("//span[contains(text(),"+iconName+")]"));
+	}
+	
+	
 //Add Unit
 	public static List<WebElement> getvalue_StudyPeriod(WebDriver driver){
-		return elementList=driver.findElements(By.xpath("//div[@id='00000000-0000-0000-0000-000000000000_31812432-47f1-4eed-a3cf-2769bed3e468_droplist']//li[@title][@class='']"));
+	return elementList=driver.findElements(By.xpath("//div[@id='00000000-0000-0000-0000-000000000000_31812432-47f1-4eed-a3cf-2769bed3e468_droplist']//li[@title][@class='']"));
 	}
 	
 	public static void enter_UnitCode(WebDriver driver, String unitcode){

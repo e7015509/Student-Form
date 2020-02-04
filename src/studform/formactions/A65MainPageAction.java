@@ -29,7 +29,7 @@ public class A65MainPageAction extends GlobalVariable{
 	
 	public void validatestudentname() throws IOException, AssertionError{
 		try{
-		commMethods.accessA65Form(driver,myvutest);
+		commMethods.accessA65Form(driver);
 		Thread.sleep(5000);
 		String studentname=A65FormPageObj.getvalue_StudentName(driver).getText();
 		System.out.println("STUDENT NAME IN FORM : "+studentname);
@@ -50,7 +50,7 @@ public class A65MainPageAction extends GlobalVariable{
 	public void validatecoursecount() throws IOException, AssertionError{
 		try{
 		String COURSE_COUNT_QUERY = SQLHelper.loadResourceToString("C:\\Users\\e7015509\\Documents\\StudentForm-AutoRepo\\Student-Form\\Queries\\coursecount.sql");
-		commMethods.accessA65Form(driver,myvutest);
+		commMethods.accessA65Form(driver);
 		Thread.sleep(5000);
 		
 		List <WebElement> courseListForm = A65FormPageObj.getvalue_CourseList(driver);//get course list from the drop down
@@ -74,7 +74,7 @@ public class A65MainPageAction extends GlobalVariable{
 	public void validatecoursedata() throws IOException, AssertionError{
 		try{
 			String COURSE_DATA_QUERY = SQLHelper.loadResourceToString("C:\\Users\\e7015509\\Documents\\StudentForm-AutoRepo\\Student-Form\\Queries\\coursedata.sql");
-			commMethods.accessA65Form(driver,myvutest);
+			commMethods.accessA65Form(driver);
 			Thread.sleep(3000);
 			//A65FormPageObj.dropdwn_Course(driver).click();
 			commMethods.clickondropdown(driver, "1");
@@ -118,7 +118,7 @@ public class A65MainPageAction extends GlobalVariable{
 	public void validatecourselocation() throws IOException, AssertionError, Exception{
 		try{
 			String COURSE_LOC_QUERY=SQLHelper.loadResourceToString("C:\\Users\\e7015509\\Documents\\StudentForm-AutoRepo\\Student-Form\\Queries\\courselocation.sql");
-			commMethods.accessA65Form(driver,myvutest);
+			commMethods.accessA65Form(driver);
 			Thread.sleep(3000);
 			commMethods.clickondropdown(driver, "1");
 			Thread.sleep(2000);
@@ -149,7 +149,7 @@ public class A65MainPageAction extends GlobalVariable{
 
 	public void validatestudyyear() throws Exception, IOException{
 	try{
-		commMethods.accessA65Form(driver,myvutest);
+		commMethods.accessA65Form(driver);
 		Thread.sleep(3000);
 			
 		String actstudyyrval= A65FormPageObj.getvalue_StudyYear(driver).getText();
@@ -170,7 +170,7 @@ public class A65MainPageAction extends GlobalVariable{
 	public void validatestudyperiod() throws Exception, IOException{
 		try{
 			String STUDY_PERIOD_QUERY=SQLHelper.loadResourceToString("C:\\Users\\e7015509\\Documents\\StudentForm-AutoRepo\\Student-Form\\Queries\\studyperiodtemp.sql");
-			commMethods.accessA65Form(driver,myvutest);
+			commMethods.accessA65Form(driver);
 			Thread.sleep(3000);
 			commMethods.clickonicon(driver,"Add Unit");
 			Thread.sleep(3000);
@@ -204,7 +204,7 @@ public class A65MainPageAction extends GlobalVariable{
 	
 	public void addsingleunit() throws Exception, IOException{
 		try{
-			commMethods.accessA65Form(driver,myvutest);
+			commMethods.accessA65Form(driver);
 			Thread.sleep(3000);
 			commMethods.clickonicon(driver,"Add Unit");
 			Thread.sleep(3000);
@@ -213,7 +213,7 @@ public class A65MainPageAction extends GlobalVariable{
 			Thread.sleep(3000);
 			List<WebElement> studyperiodList = A65FormPageObj.getvalue_StudyPeriod(driver);
 				studyperiodList.get(0).click();
-				A65FormPageObj.enter_UnitCode(driver, unitcode1);
+				A65FormPageObj.enter_UnitCode(driver, unitcode);
 				Thread.sleep(2000);
 		}catch (Throwable addunitexcep){
 			commMethods.methodname="validateaddunit_";
